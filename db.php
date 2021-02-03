@@ -1,6 +1,7 @@
 
 <?php
-
+session_start();
+header('Cache-Control: no-cache');
 $serveur_name ="localhost";
 	$db_username ="root";
 	$db_password = "";

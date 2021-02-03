@@ -1,8 +1,8 @@
-<?php
 
+<?php
      if(isset($_SESSION['success']) && $_SESSION['success'] !='')
      {
-         echo '<h5 style="background-color:#345db1;color:white;text-align:center;padding: 20px;margin-bottom: 20px;">'.$_SESSION['success'].'</h5>';
+         echo '<h5 style="background-color:#499250;color:white;text-align:center;padding: 20px;margin-bottom: 20px;">'.$_SESSION['success'].'</h5>';
          unset($_SESSION['success']);
      }
       

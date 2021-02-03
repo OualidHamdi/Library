@@ -7,11 +7,11 @@
           <tr>
             <td><?php echo $row['title']; ?></td>
             <td><?php echo $row['auteur']; ?></td>
-            <td><?php echo $row['image']; ?></td>
+            <td><?php echo '<img src="upload/'.$row['image'].'" width="100">'?></td>
             <td><?php echo $row['publishedat']; ?></td>
             <td>
               <form action="updateBook.php" method="post">
-                <input type="hidden" name="edit_id" value="<?php echo $row['ID']; ?>">
+                <input type="text" name="edit_id" value="<?php echo $row['ID']; ?>">
                <button  type="submit"  name="edit_Book" class="btn btn-warning"> Update</button>
               </form>
           <!-- Modal -->
@@ -26,7 +26,7 @@
         
        <form action="delete.php" method="post">
           
-          <input type="hidden" name="delete_id" value="<?php echo $row['ID']; ?>">
+          <input type="text" name="delete_id" value="<?php echo $row['ID']; ?>">
           <button type="submit" class="btn btn-danger" name="delete">YES</button>
        </form>
         <button type="button" class="btn btn-secondary" data-dismiss="modal">NO</button>
@@ -35,9 +35,9 @@
   </div>
 </div>
                 
-                    <input type="hidden" name="delete_id" value="<?php echo $row['ID']; ?>">
+              
                     <button type="submit" name="cat_delete_btn" class="btn btn-danger" data-toggle="modal" data-target="#exampleModal"> Delete</button>
-                </form>
+                
             </td>
           </tr>
           <?php

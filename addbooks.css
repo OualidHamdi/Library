@@ -1,13 +1,23 @@
-.nav{
-    background-color: purple;
+.nav {
+    background-color: rgb(77, 33, 223);
 }
-a{
+
+a {
+    color: white;
+    font-weight: bold;
+    line-height: 5;
+    box-sizing: border-box;
+    text-decoration: line-through;
+    font-size: large;
+}
+
+
+}
+a:hover {
     color: white;
 }
-a:hover{
-    color: white;
-}
-input[type=text], select {
+input[type=text],
+select {
     width: 100%;
     padding: 12px 20px;
     margin: 8px 0;
@@ -15,32 +25,34 @@ input[type=text], select {
     border: 1px solid #ccc;
     border-radius: 4px;
     box-sizing: border-box;
-  }
- 
-  div.container {
+}
+div.container {
     margin-top: 80px;
     width: 600px;
     margin: auto;
     border-radius: 5px;
     background-color: #f2f2f2;
     padding: 20px;
-  }
-.mrgn1{
+}
+.mrgn1 {
     margin-top: 80px;
 }
-#btn{
+#btn {
     position: absolute;
-    right: 30px;
-    background-color: blue;
+    right: 360px;
+    background-color: rgb(77, 33, 223);
     color: white;
-    padding-left: 30px;
-    padding-right: 30px;
+    border: none;
+    padding: 7px 50px;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 16px;
 }
-.header2{
+.header2 {
     margin-top: 50px;
     margin-left: 50px;
     margin-right: 100px;
 }
-.title{
-    color: purple;
+.title {
+    color: rgb(77, 33, 223);
 }

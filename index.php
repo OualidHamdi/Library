@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -8,21 +9,9 @@
     <title>Library</title>
 </head>
 <body>
-    <!--nav start-->
-    <nav class="navbar navbar-expand-lg nav">
-        <div class="container-md">
-          <a class="navbar-brand" href="#">Navbar</a>
-          <ul class="nav justify-content-end">
-            <li class="nav-item">
-                <a class="nav-link" href="#">Home</a>
-            </li>
-            <li class="nav-item">
-              <a class="nav-link" href="./books.php">Books</a>
-            </li>
-          </ul>
-        </div>
-      </nav>
-    <!--nav end-->
-    
+    <?php include('header.php') ?>
+    <div class="p">⌜ WELCOME TO LIBRARY ⌟</div>
+
+        <?php include('footer.php') ?>
 </body>
 </html>

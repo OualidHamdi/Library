@@ -1,9 +1,32 @@
-.nav{
-    background-color: purple;
+  *,::after,
+         ::before {
+            box-sizing: initial;
+        }
+.nav {
+    background-color: rgb(77, 33, 223);
+    width: auto;
+    height: 100px;
 }
-a{
+
+a {
+    color: white;
+    font-weight: bold;
+    line-height: 5;
+    box-sizing: border-box;
+    text-decoration: line-through;
+    font-size: large;
+}
+
+a:hover {
     color: white;
 }
-a:hover{
-    color: white;
+
+.p {
+    text-align: center;
+    margin-top: 18%;
+    font-size: large;
+    text-shadow: 50px;
+    font-size: 35px;
+    font-weight: bolder;
+    color: rgb(77, 33, 223);
 }

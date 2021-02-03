@@ -8,8 +8,13 @@ if(isset($_POST['Update']))
 $id = $_POST['edit_id'];
 $title = $_POST['title'];
 $auteur = $_POST['auteur'];
-$image = $_POST['image'];
+$image = addslashes($_FILES["upd_img"]['name']);
 $publishedat = $_POST['publishedat'];
+
+//  if(empty($_FILE['upd_img']['name'])){
+//     $image= "SELECT image FROM books WHERE ID = '$id'";
+//     mysqli_query($connection, $image);
+// }
 
     $query = " UPDATE books SET title = '$title' , auteur ='$auteur', image = '$image',publishedat='$publishedat' WHERE ID = '$id'";
 
@@ -17,6 +22,8 @@ $publishedat = $_POST['publishedat'];
 
     if($query_run)
     {
+        move_uploaded_file($_FILES["upd_img"]["tmp_name"], "upload/".$_FILES["upd_img"]["name"]);
+
         $_SESSION['success'] = "Votre modification a été bien effectuée";
         header('Location: books.php');
     }else
