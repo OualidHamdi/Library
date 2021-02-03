@@ -1,0 +1,46 @@
+.nav{
+    background-color: purple;
+}
+a{
+    color: white;
+}
+a:hover{
+    color: white;
+}
+input[type=text], select {
+    width: 100%;
+    padding: 12px 20px;
+    margin: 8px 0;
+    display: block;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    box-sizing: border-box;
+  }
+ 
+  div.container {
+    margin-top: 80px;
+    width: 600px;
+    margin: auto;
+    border-radius: 5px;
+    background-color: #f2f2f2;
+    padding: 20px;
+  }
+.mrgn1{
+    margin-top: 80px;
+}
+#btn{
+    position: absolute;
+    right: 30px;
+    background-color: blue;
+    color: white;
+    padding-left: 30px;
+    padding-right: 30px;
+}
+.header2{
+    margin-top: 50px;
+    margin-left: 50px;
+    margin-right: 100px;
+}
+.title{
+    color: purple;
+}
