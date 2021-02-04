@@ -24,7 +24,7 @@
         <div class="header2">
             <form class="form-inline mb-3">
                 <h3 class="title">DELETE BOOK :</h3>
-               
+               </form>
                        <!-- Modal -->
 
     <div class="modal-content">
@@ -46,7 +46,7 @@
     </div>
  
             
-            </form>
+            
         </div>
         
 </body>
