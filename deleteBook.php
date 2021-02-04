@@ -36,11 +36,11 @@
         
        <form action="delete.php" method="post">
           
-          <input type="text" name="delete_id" value="<?php echo '$ID'; ?>">
+          <input type="text" name="delete_id" value="<?php echo $ID; ?>">
           <button type="submit" class="btn btn-danger" name="delete">YES</button>
        </form>
        <form action="books.php" method="post">
-            <button type="button" class="btn btn-secondary" data-dismiss="modal">NO</button>
+            <button type="submit" class="btn btn-secondary" data-dismiss="modal">NO</button>
        </form>
       </div>
     </div>
