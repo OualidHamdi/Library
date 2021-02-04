@@ -11,10 +11,15 @@ $auteur = $_POST['auteur'];
 $image = addslashes($_FILES["upd_img"]['name']);
 $publishedat = $_POST['publishedat'];
 
-//  if(empty($_FILE['upd_img']['name'])){
-//     $image= "SELECT image FROM books WHERE ID = '$id'";
-//     mysqli_query($connection, $image);
-// }
+ if(empty($_FILE['upd_img']['name'])){
+    $query_image= "SELECT image FROM books WHERE ID = '$id'";
+    $result=mysqli_query($connection, $query_image);
+    $resultCheck = mysqli_num_rows($result);
+	while($row = $result->fetch_assoc()) {
+		$image = $row['image'];
+		
+	}
+}
 
     $query = " UPDATE books SET title = '$title' , auteur ='$auteur', image = '$image',publishedat='$publishedat' WHERE ID = '$id'";
 
