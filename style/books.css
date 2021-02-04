@@ -15,7 +15,6 @@ a:hover {
 a {
     color: white;
     font-weight: bold;
-    line-height: 5;
     box-sizing: border-box;
     text-decoration: line-through;
     font-size: large;
