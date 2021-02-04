@@ -47,5 +47,6 @@
         </div>
         </div>
               <!--end of form to add books-->
+               <?php include('footer.php') ?>
 </body>
 </html>
