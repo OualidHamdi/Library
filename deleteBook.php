@@ -36,7 +36,7 @@
         
        <form action="delete.php" method="post">
           
-          <input type="text" name="delete_id" value="<?php echo $ID; ?>">
+          <input type="hidden" name="delete_id" value="<?php echo $ID; ?>">
           <button type="submit" class="btn btn-danger" name="delete">YES</button>
        </form>
        <form action="books.php" method="post">
