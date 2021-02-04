@@ -39,7 +39,7 @@
                 foreach ($query_run as $row ) {
                     ?>
 
-            <form action="update.php" method="post">
+            <form action="update.php" method="post" enctype="multipart/form-data">
             <div class="form-group">
                 <label for="Title">Title</label>
                 <input type="text" class="form-control" 
