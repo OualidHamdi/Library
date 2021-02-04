@@ -18,7 +18,7 @@
               
                    <form action="deleteBook.php" method="post">
                      <input type="text" name="delete_id" value="<?php echo $row['ID']; ?>">
-                      <button type="submit" name="delete_btn" class="btn btn-danger" data-toggle="modal" data-target="#exampleModal"> Delete</button>
+                      <button type="submit" name="delete_btn" class="btn btn-danger" > Delete</button>
                    </form>
                 
             </td>
