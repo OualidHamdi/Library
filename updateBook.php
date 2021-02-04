@@ -51,7 +51,7 @@
             </div>
             <div class="input-group">
                 <label for="inputGroupFile04">image</label>
-                <input type="file" value="<?php echo $row['image']; ?>" class="form-control" name="image" >
+                <input type="file" value="<?php echo $row['image']; ?>" class="form-control" name="upd_img" >
                
               </div>
             <div class="form-group">
