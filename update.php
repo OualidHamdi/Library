@@ -11,7 +11,7 @@ $auteur = $_POST['auteur'];
 $image = addslashes($_FILES["upd_img"]['name']);
 $publishedat = $_POST['publishedat'];
 
- if(empty($image){
+ if(empty($image)){
     $query_image= "SELECT image FROM books WHERE ID = '$id'";
     $result=mysqli_query($connection, $query_image);
     $resultCheck = mysqli_num_rows($result);
