@@ -45,8 +45,8 @@
              <button type="submit" name="Add" class="btn btn-primary">Add</button>
          </form>
         </div>
-        </div><br><br><br>
+        </div>
               <!--end of form to add books-->
-               <?php include('footer.php') ?>
+              
 </body>
 </html>
