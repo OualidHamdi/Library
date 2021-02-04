@@ -26,8 +26,7 @@
                 <h3 class="title">DELETE BOOK :</h3>
                
                        <!-- Modal -->
-<div class="modal fade" id="exampleModal" tabindex="-1"  >
-  <div class="modal-dialog" role="document">
+
     <div class="modal-content">
 
       <div class="modal-body">
@@ -40,11 +39,12 @@
           <input type="text" name="delete_id" value="<?php echo '$ID'; ?>">
           <button type="submit" class="btn btn-danger" name="delete">YES</button>
        </form>
-        <button type="button" class="btn btn-secondary" data-dismiss="modal">NO</button>
+       <form action="books.php" method="post">
+            <button type="button" class="btn btn-secondary" data-dismiss="modal">NO</button>
+       </form>
       </div>
     </div>
-  </div>
-</div>
+ 
             
             </form>
         </div>
