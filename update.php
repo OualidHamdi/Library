@@ -21,7 +21,8 @@ $publishedat = $_POST['publishedat'];
 	}
 }
 
-    $query = " UPDATE books SET title = '$title' , auteur ='$auteur', image = '$image',publishedat='$publishedat' WHERE ID = '$id'";
+    $query = " UPDATE books SET title = '$title' , auteur ='$auteur', 
+    image = '$image',publishedat='$publishedat' WHERE ID = '$id'";
 
     $query_run = mysqli_query($connection,$query);
 
