@@ -63,7 +63,7 @@
 
                <div class="form-group">
                 <label class="text-inverse" for="Publishedat">Published at</label>
-                <input type="text" class="form-control" name="publishedat" id="Publishedat" placeholder="Published at" value="<?php echo $row['publishedat']; ?>" required>
+                <input type="date" class="form-control" name="publishedat" id="Publishedat" placeholder="Published at" value="<?php echo $row['publishedat']; ?>" required>
               </div>
 <div class="row">
             <div class="col-lg-12 col-sm-12 col-12 text-center">
