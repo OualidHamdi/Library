@@ -167,6 +167,14 @@ button.btnStyle{
   text-align: center;
 }
 
+.edit_Book{
+  float: left;
+}
+.delete_btn{
+  float: right;
+  padding: 8px 15px;
+}
+
 
 @media only screen and (max-width: 767px){
   .modal-content{
@@ -181,6 +189,9 @@ button.btnStyle{
   }
   .modal-footer{
      display: block;
+  }
+  .edit_Book,.delete_btn{
+    float: none;
   }
   }
 

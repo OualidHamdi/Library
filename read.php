@@ -12,13 +12,13 @@
             <td>
               <form action="updateBook.php" method="post" >
                 <input type="hidden" name="edit_id" value="<?php echo $row['ID']; ?>">
-               <button  type="submit"  name="edit_Book" class="btn btn-warning" style="float: left;"> Update</button>
+               <button  type="submit"  name="edit_Book" class="btn btn-warning edit_Book"  > Update</button>
               </form>
       
               
                    <form action="deleteBook.php" method="post"  >
                      <input type="hidden" name="delete_id" value="<?php echo $row['ID']; ?>">
-                      <button type="submit" name="delete_btn" class="btn btn-danger" style="float: right;"> Delete</button>
+                      <button type="submit" name="delete_btn" class="btn btn-danger delete_btn"  > Delete</button>
                    </form>
                 
             </td>
