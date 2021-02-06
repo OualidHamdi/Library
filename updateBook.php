@@ -7,9 +7,8 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-giJF6kkoqNQ00vy+HMDP7azOuL0xtbfIcaT9wjKHr8RbDVddVHyTfAAsrekwKmP1" crossorigin="anonymous">
-    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-beta/css/bootstrap.min.css" integrity="sha384-/Y6pD6FV/Vv2HJnA6t+vslU6fwYXjCFtcEpHbNJ0lyAFsXTsjBbfaDjzALeQsN6M" crossorigin="anonymous">
-        <link rel="stylesheet" href="style/addbooks.css">
+       <?php include('boostrap.php') ?>
+    <link rel="stylesheet" href="style/style.css">
 
     <title>Library</title>
 </head>
@@ -19,16 +18,16 @@
       include('function.php');
      ?>
         <!--start of form to add books-->
-        <div class="header2">
-            <form class="form-inline mb-3">
-                <h3 class="title">LIST OF BOOKS :</h3>
-                <button type="button" id="btn">ajouter</button>
-            </form>
-        </div>
-        <div class="mrgn1">
-        <div class="container">
+        <div class=" main-container">
+       <div class="container">
+           <form class="form-inline mb-3">
+                    <div class="ilinetext">
+                    <h5 class="title">UPDATE BOOK :</h5>
+                    </div>
+              </form>
 
-            
+
+ 
             <?php
             if (isset($_POST['edit_Book']))
             {
@@ -39,34 +38,54 @@
                 foreach ($query_run as $row ) {
                     ?>
 
-            <form action="update.php" method="post" enctype="multipart/form-data">
-            <div class="form-group">
-                <label for="Title">Title</label>
-                <input type="text" class="form-control" 
-                value="<?php echo $row['title']; ?>" name="title">
-            </div>
-            <div class="form-group">
-                <label for="Author">Author</label>
-                <input type="text" value="<?php echo $row['auteur']; ?>" class="form-control"  name="auteur">
-            </div>
-            <div class="input-group">
-                <label for="inputGroupFile04">image</label>
-                <input type="file"  class="form-control" name="upd_img" >
-               
+  <div class="row">
+      <div class="offset-lg-2 col-lg-8 col-sm-12 col-12 border rounded main-section">
+       
+        <form action="update.php" method="post" enctype="multipart/form-data" class="container" id="needs-validation" novalidate>
+          
+               <div class="form-group">
+                <label class="text-inverse" for="Title">Title</label>
+                <input type="text" class="form-control" id="Title" name="title" placeholder="Title"  value="<?php echo $row['title']; ?>"  required>
               </div>
-            <div class="form-group">
-                <label for="Title">published at</label>
-                <input type="text" value="<?php echo $row['publishedat']; ?>" class="form-control" name="publishedat">
+               <div class="form-group">
+                <label class="text-inverse" for="Author">Author</label>
+                <input type="text" class="form-control" id="Author" name="auteur" placeholder="Author"  value="<?php echo $row['auteur']; ?>" required>
+              </div>
+
+                 <div class="form-group">
+                    <label class="text-inverse" for="image">Image</label><br>
+                <label class="custom-file">
+
+                  <input type="file" id="image" name="upd_img" class="form-control custom-file-input" style="padding: 0 300px;" required>
+                  <span class="custom-file-control"></span>
+                </label>
+              </div> 
+
+               <div class="form-group">
+                <label class="text-inverse" for="Publishedat">Published at</label>
+                <input type="text" class="form-control" name="publishedat" id="Publishedat" placeholder="Published at" value="<?php echo $row['publishedat']; ?>" required>
+              </div>
+<div class="row">
+            <div class="col-lg-12 col-sm-12 col-12 text-center">
+                <input type="hidden" name="edit_id" value="<?php echo $row['ID']; ?>">
+                <button class="bntStyle"  name="Update" type="submit">Update</button>
             </div>
-              <input type="hidden" name="edit_id" value="<?php echo $row['ID']; ?>">
-             <button type="submit" name="Update" class="btn btn-primary">Update</button>
-         </form>
-         <?php
+          </div>
+       
+     
+ </form>
+
+    </div>  
+ </div>
+<?php
                 }
             }
         ?>
+
+           
+
+ </div>
+        <?php include('footer.php') ?>
         </div>
-        </div>
-              <!--end of form to add books-->
 </body>
 </html>

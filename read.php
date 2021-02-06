@@ -4,21 +4,21 @@
         while($row = mysqli_fetch_assoc($query_run))
         {
           ?>
-          <tr>
+          <tr class="trLine">
             <td><?php echo $row['title']; ?></td>
             <td><?php echo $row['auteur']; ?></td>
             <td><?php echo '<img src="upload/'.$row['image'].'" width="100">'?></td>
             <td><?php echo $row['publishedat']; ?></td>
             <td>
-              <form action="updateBook.php" method="post" style="float: left;">
+              <form action="updateBook.php" method="post" >
                 <input type="hidden" name="edit_id" value="<?php echo $row['ID']; ?>">
-               <button  type="submit"  name="edit_Book" class="btn btn-warning"> Update</button>
+               <button  type="submit"  name="edit_Book" class="btn btn-warning" style="float: left;"> Update</button>
               </form>
       
               
-                   <form action="deleteBook.php" method="post" >
+                   <form action="deleteBook.php" method="post"  >
                      <input type="hidden" name="delete_id" value="<?php echo $row['ID']; ?>">
-                      <button type="submit" name="delete_btn" class="btn btn-danger" > Delete</button>
+                      <button type="submit" name="delete_btn" class="btn btn-danger" style="float: right;"> Delete</button>
                    </form>
                 
             </td>

@@ -1,32 +1,141 @@
-  *,::after,
-         ::before {
-            box-sizing: initial;
-        }
-.nav {
-    background-color: rgb(77, 33, 223);
-    width: auto;
-    height: 100px;
+
+.container {
+  padding-top: 40px;
 }
 
-a {
+a h3 {
+  margin-top: 0!important;
+}
+
+.col-sm-15 {
+ 
+  margin: 1%;
+  height: 20em;
+  float: left;
+  position: relative;
+}
+
+.col-sm-15 .wrap:before {
+  content: '';
+  position: absolute;
+  width: 30px;
+  height: 30px;
+  bottom: 0;
+  right: 0;
+  border-bottom: 10px solid #6001ff;
+  border-right: 10px solid #6001ff;
+}
+
+.col-sm-15 .wrap:after {
+  content: '';
+  position: absolute;
+  width: 30px;
+  height: 30px;
+  top: 0;
+  left: 0;
+  border-top: 10px solid #6001ff;
+  border-left: 10px solid #6001ff;
+}
+
+
+.dual-collapse1 a{
+  font-size: 20px;
+}
+
+.navbar{
+      padding: 1.5rem 3rem;
+}
+
+.wrap {
+
+   color:#6001ff;
+   margin-top: 15px;
+  padding: 15px;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  -ms-transform: translateX(-50%) translateY(-50%);
+  -webkit-transform: translate(-50%,-50%);
+  transform: translate(-50%,-50%);
+}   
+.wrap h3{
+  padding: 2px 15px;
+}
+.itme-end{
+  text-align: end;
+}
+
+.navbar-toggler{
+      position: absolute;
+    right: 20px;
+       top: 26px;
+}
+nav{
+  background: #6001ff;
+}
+a{
+  color:white;
+}
+a:hover{
+    color:lightblue;
+}
+
+@media (min-width: 768px){
+  .navbar-expand-md .navbar-nav .nav-link{
+    padding-right: 0.5rem;
+    padding-left: 1.5rem;
+}
+}
+.navbar-dark .navbar-nav .nav-link {
     color: white;
-    font-weight: bold;
-    line-height: 5;
-    box-sizing: border-box;
-    text-decoration: line-through;
-    font-size: large;
 }
 
-a:hover {
-    color: white;
+.ilinetext {
+  display: flex;
+  justify-content: space-between;
+  width: 95%;
+}
+.title{
+     font-weight: bold;
+     color:#6001ff;
+}
+.bntStyle{
+  background:#6001ff; 
+  color:white;
+  padding: 5px 45px;
+  border:none;
+   font-weight: bold;
 }
 
-.p {
+.card-body{
+  padding: 0;
+}
+#table .trBg{
+background: #e7e7e7;
+color:#838383;
+margin: 10px;}
+
+th{
+  padding: 8px 0;
+}
+.trLine,td{
+  border:1px #bbbbbb solid;
+}
+
+
+
+.main-container {
+ min-height: 80vh; /* will cover the 100% of viewport */
+ overflow: hidden;
+ display: block;
+ position: relative;
+ padding-bottom: 100px; /* height of your footer */
+}
+#footer {
+ position: absolute;
+ bottom: 0;
+ width: 100%;
     text-align: center;
-    margin-top: 18%;
-    font-size: large;
-    text-shadow: 50px;
-    font-size: 35px;
-    font-weight: bolder;
-    color: rgb(77, 33, 223);
+    font-size: 12px;    
+    color: grey;   
 }

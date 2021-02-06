@@ -4,14 +4,31 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-giJF6kkoqNQ00vy+HMDP7azOuL0xtbfIcaT9wjKHr8RbDVddVHyTfAAsrekwKmP1" crossorigin="anonymous">
+   <?php include('boostrap.php') ?>
     <link rel="stylesheet" href="style/style.css">
     <title>Library</title>
 </head>
 <body>
     <?php include('header.php') ?>
-    <div class="p">⌜ WELCOME TO LIBRARY ⌟</div>
+    
+<div class=" main-container">
+    <section id="funnnels">
+  <div class="container">
+    <div class="row padd">
+
+      <div class="col-sm-15 text-center">
+          <div class="wrap">
+            <h3>WELCOME TO LIBRARY</h3>
+          </div>
+        <div class="clearfix"></div>
+      </div>
+
+    </div>
+  </div>
+</section>
+
 
         <?php include('footer.php') ?>
+        </div>
 </body>
 </html>
