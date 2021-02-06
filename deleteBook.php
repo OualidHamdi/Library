@@ -1,4 +1,4 @@
-  <?php
+<?php
  include('db.php');
     
   ?>
@@ -11,6 +11,7 @@
     <link rel="stylesheet" href="style/style.css">
 
     <title>Library</title>
+
 </head>
 <body>
         <?php
@@ -40,19 +41,21 @@
                        <!-- Modal -->
 
     <div class="modal-content">
-
-      <div class="modal-body">
-        ...
+          <div class="head">?</div>
+   
+      <div class="modal-body body">
+        Etes-vous sûr de vouloir supprimer ce livre?
       </div>
-      <div class="modal-footer" style="width: 67%;border:none;">
+      <div class="modal-footer" style="margin:auto;border:none;">
         
        <form action="delete.php" method="post">
-          
-          <input type="hidden" name="delete_id" value="<?php echo $ID; ?>">
-          <button type="submit" class="btn btn-danger" name="delete">YES</button>
+        <input type="hidden" name="delete_id" value="<?php echo $ID; ?>">
+        <button type="submit" class="btnStyle"  name="delete">YES</button>
        </form>
+       
        <form action="books.php" method="post">
-            <button type="submit" class="btn btn-secondary" data-dismiss="modal">NO</button>
+        <button type="submit" class="btnStyle" style="background:#683bd4;"data-dismiss="modal">NO</button>
+       
        </form>
       </div>
     

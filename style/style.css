@@ -61,9 +61,7 @@ a h3 {
 .wrap h3{
   padding: 2px 15px;
 }
-.itme-end{
-  text-align: end;
-}
+
 
 .navbar-toggler{
       position: absolute;
@@ -139,3 +137,50 @@ th{
     font-size: 12px;    
     color: grey;   
 }
+.modal-content{
+  margin: auto;
+    height: 196px;
+    background: rgb(212, 213, 215);
+    border: none;
+    width: 50%;
+    border-radius: 0 !important;
+    padding-top: 20px;
+
+}
+.head{
+  font-size: 20px;
+    font-weight: bold;
+    color: red;
+    text-align: center;
+}
+button.btnStyle{
+  border: none;
+  width: 100px;
+  font-size: 12px;
+  font-weight: bold;
+  color: white;
+  background: red;
+  height: 32px; 
+}
+.body{
+  font-weight: bold;
+  text-align: center;
+}
+
+
+@media only screen and (max-width: 767px){
+  .modal-content{
+    width: 100%;
+   
+    align-items: center;
+    margin: auto;
+    padding: 0;
+  }
+  .btnStyle{
+    margin: 0;
+  }
+  .modal-footer{
+     display: block;
+  }
+  }
+
