@@ -35,10 +35,10 @@
         <div class=" main-container">
         <div class="container">
            
-                <form class="form-inline mb-3">
+                <form class="form-inline mb-3" action="addbook.php" method="POST">
                     <div class="ilinetext">
                     <h5 class="title">LIST OF BOOKS :</h5>
-                    <button type="button" class="bntStyle"><a href="addbook.php">Add</a></button>
+                    <button type="submit" class="bntStyle">Add</button>
   
                     </div>
               </form>

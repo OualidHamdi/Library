@@ -11,6 +11,12 @@ $auteur = $_POST['auteur'];
 $image = addslashes($_FILES["upd_img"]['name']);
 $publishedat = $_POST['publishedat'];
 
+if($title=="" || $auteur=="" || $publishedat=="" ){
+$_SESSION['status'] = "Pardon!! Veuillez remplire tous les champs!";
+header ('location: ../books.php');
+return;
+}
+
  if(empty($image)){
     $query_image= "SELECT image FROM books WHERE ID = '$id'";
     $result=mysqli_query($connection, $query_image);

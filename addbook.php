@@ -1,3 +1,4 @@
+
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -10,6 +11,7 @@
 <body>
       
         <?php
+     include('function/db.php');
       include('header.php') ;
       require('function/function.php');
      ?>
