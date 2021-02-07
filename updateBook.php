@@ -1,5 +1,5 @@
   <?php
- include('db.php');
+ include('function/db.php');
     
   ?>
 <!DOCTYPE html>
@@ -7,7 +7,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-       <?php include('boostrap.php') ?>
+       <?php include('function/boostrap.php') ?>
     <link rel="stylesheet" href="style/style.css">
 
     <title>Library</title>
@@ -15,7 +15,7 @@
 <body>
         <?php
         include('header.php');
-      include('function.php');
+      include('function/function.php');
      ?>
         <!--start of form to add books-->
         <div class=" main-container">
@@ -41,7 +41,7 @@
   <div class="row">
       <div class="offset-lg-2 col-lg-8 col-sm-12 col-12 border rounded main-section">
        
-        <form action="update.php" method="post" enctype="multipart/form-data" class="container" id="needs-validation" novalidate>
+        <form action="function/update.php" method="post" enctype="multipart/form-data" class="container" id="needs-validation" novalidate>
           
                <div class="form-group">
                 <label class="text-inverse" for="Title">Title</label>

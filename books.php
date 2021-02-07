@@ -1,5 +1,5 @@
 <?php
- include('db.php');
+ include('function/db.php');
 
     $query = "SELECT * FROM Books";
     $query_run = mysqli_query($connection,$query);
@@ -11,7 +11,7 @@
     <head>
         <meta charset="UTF-8">
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
-          <?php include('boostrap.php') ?>
+          <?php include('function/boostrap.php') ?>
     <link rel="stylesheet" href="style/style.css">
 
         <title>LIBRARY</title>
@@ -27,7 +27,7 @@
     <body>
         <?php
         include('header.php');
-      include('function.php');
+      include('function/function.php');
      ?> 
         <!--books table-->
        
@@ -53,7 +53,7 @@
                             <th>action</th>
                         </tr>
                         <?php
-          include('read.php');
+          include('function/read.php');
           ?>
                     </table>
                 </div>

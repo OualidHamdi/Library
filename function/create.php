@@ -13,14 +13,14 @@ values ('$title','$auteur','$image','$publishedat')";
 $query_run = mysqli_query($connection, $query);
 
 if($query_run){
-move_uploaded_file($_FILES["upd_img"]["tmp_name"], "upload/".$_FILES["upd_img"]["name"]);
+move_uploaded_file($_FILES["upd_img"]["tmp_name"], "../upload/".$_FILES["upd_img"]["name"]);
 
 $_SESSION['success'] = "Votre insertion a bien été effectuée";
 
-header ('location: books.php');
+header ('location: ../books.php');
 }else{
 $_SESSION['status'] = "Pardon!! Vuillez réessayer plus tard!";
-header ('location: addbook.php');
+header ('location: ../addbook.php');
 }
 	
 ?>

@@ -28,14 +28,14 @@ $publishedat = $_POST['publishedat'];
 
     if($query_run)
     {
-        move_uploaded_file($_FILES["upd_img"]["tmp_name"], "upload/".$_FILES["upd_img"]["name"]);
+        move_uploaded_file($_FILES["upd_img"]["tmp_name"], "../upload/".$_FILES["upd_img"]["name"]);
 
         $_SESSION['success'] = "Votre modification a été bien effectuée";
-        header('Location: books.php');
+        header('Location: ../books.php');
     }else
     {
         $_SESSION['status']= "Votre modification n'as pas été effectuée";
-        header('Location: books.php');
+        header('Location: ../books.php');
     }
 }
 ?>
