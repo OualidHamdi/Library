@@ -1,8 +1,8 @@
 
 <!DOCTYPE html>
-<base href="http://localhost/library/onebook.php">
 <html lang="en">
 <head>
+  <base href="http://localhost/library/onebook.php">
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <?php include('function/boostrap.php') ?>
