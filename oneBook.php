@@ -1,4 +1,4 @@
-<base href="http://localhost/library/onebook.php">
+
 <!DOCTYPE html>
 <html lang="en">
 <head>
