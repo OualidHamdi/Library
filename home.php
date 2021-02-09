@@ -38,11 +38,10 @@
   <section id="section2">
      <div class=" main-container"> 
       <div class="container">
-           <form class="form-inline mb-3">
-                    <div class="ilinetext">
-                    <h5 class="title" style="margin-bottom: 90px;">Our recent books :</h5>
-                    </div>
-              </form>
+          
+                   
+      <h3 class="title" style="margin-bottom: 70px;text-align: center;">Our recent books :</h3>
+          
           
      
        

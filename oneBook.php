@@ -50,7 +50,7 @@
     <div class="card-body lineheight" style="background: #f3f3f3;border-radius: 10px;padding: 20px;">
       <h5><span class="testStart">NAME : </span><?php echo $row['title']; ?></h5>
       <h5><span class="testStart">AUTHOR : </span><?php echo $row['auteur']; ?></h5>
-      <h5><span class="testStart">PRIX : </span><?php echo $row['Prix']; ?> $</h5>
+      <h5><span class="testStart">PRIX : </span>$ <?php echo $row['Prix']; ?></h5>
       <h5><span class="testStart">QUANTITE AU STOCK : </span><?php echo $row['QStock']; ?></h5>
       <h5><span class="testStart">DATE DE PUBLICATION : </span><?php echo $row['publishedat']; ?></h5>
     </div>
