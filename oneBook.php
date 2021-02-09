@@ -20,21 +20,21 @@
             if(isset($_POST['shearch'])){
               if (!empty($_POST['idBook'])){
                 $ID = $_POST['idBook'];
-                $query = "SELECT * FROM books WHERE ID ='$ID'";
+                $query = "SELECT * FROM books WHERE ID ='$ID'  ORDER BY ID DESC";
                 $query_run = mysqli_query($connection,$query);
               }else{
                 $book = $_POST['book'];
-                $query = "SELECT * FROM books WHERE title LIKE'$book%'";
+                $query = "SELECT * FROM books WHERE title LIKE'$book%'  ORDER BY ID DESC";
                 $query_run = mysqli_query($connection,$query);
               }
-                
+                ?>  <!--start of form to add books-->
+       <div class=" main-container"> 
+      <div class="container"><?php
                 foreach ($query_run as $row ) {
             
         ?>
 
-        <!--start of form to add books-->
-       <div class=" main-container"> 
-      <div class="container">
+      
            <form class="form-inline mb-3">
                     <div class="ilinetext">
                     <h5 class="title"><?php echo $row['title']; ?> :</h5>
@@ -55,7 +55,7 @@
     </div>
      </div>
   </div>
-  <div class="col-lg-6 col-md-4">
+  <div class="col-lg-6 col-md-4" style="margin-bottom: 36px;">
   <div class="card">
     <?php echo '<img class="card-img-top" style="max-height: 319px;" src="upload/'.$row['image'].'">'?>
   </div>
