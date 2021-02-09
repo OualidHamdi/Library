@@ -18,9 +18,16 @@
       require('function/function.php');
 
             if(isset($_POST['shearch'])){
+              if (!empty($_POST['idBook'])){
                 $ID = $_POST['idBook'];
                 $query = "SELECT * FROM books WHERE ID ='$ID'";
                 $query_run = mysqli_query($connection,$query);
+              }else{
+                $book = $_POST['book'];
+                $query = "SELECT * FROM books WHERE title LIKE'$book%'";
+                $query_run = mysqli_query($connection,$query);
+              }
+                
                 foreach ($query_run as $row ) {
             
         ?>

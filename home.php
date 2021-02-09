@@ -24,8 +24,10 @@
       <div class="col-sm-15 text-center" style="height: 25em;">
           <div class="wrapForm">
             <h1>READ<br> MORE<br> BOOKS</h1>
-            <input type="text" name="book" placeholder="FIND YOUR BOOK HERE"><br>
-            <input type="button" class="bntStyle" style="padding: 7px 23px;" name="shearch" value="shearch">
+            <form action="oneBook.php" method="POST">
+              <input type="text" name="book" placeholder="FIND YOUR BOOK HERE"><br>
+            <input type="submit" class="bntStyle" style="padding: 7px 23px;" name="shearch" value="shearch">
+            </form>
           </div>
         <div class="clearfix"></div>
       </div>
