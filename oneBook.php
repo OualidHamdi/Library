@@ -1,5 +1,6 @@
 
 <!DOCTYPE html>
+<base href="http://localhost/library/onebook.php">
 <html lang="en">
 <head>
     <meta charset="UTF-8">
