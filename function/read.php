@@ -9,6 +9,8 @@
             <td><?php echo $row['auteur']; ?></td>
             <td><?php echo '<img src="upload/'.$row['image'].'" width="100">'?></td>
             <td><?php echo $row['publishedat']; ?></td>
+            <td><?php echo $row['Prix']; ?></td>
+            <td><?php echo $row['QStock']; ?></td>
             <td>
               <form action="updateBook.php" method="post" >
                 <input type="hidden" name="edit_id" value="<?php echo $row['ID']; ?>">

@@ -1,4 +1,12 @@
 
+*{
+  margin: 0;
+  padding: 0;
+
+}
+body,html{
+  height: 100%;
+}
 .container {
   padding-top: 40px;
 }
@@ -167,11 +175,8 @@ button.btnStyle{
   text-align: center;
 }
 
-.edit_Book{
-  float: left;
-}
+
 .delete_btn{
-  float: right;
   padding: 8px 15px;
 }
 
@@ -195,3 +200,79 @@ button.btnStyle{
   }
   }
 
+.bg{
+  background: url('../img/bgImg.jpg');
+  height: calc(100% - 88px);
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+.colorBg{
+    background: #000000b0;
+    width: 100%;
+    height: calc(100% - 88px);
+
+    position: absolute;
+}
+.wrapForm{
+     color:white;
+
+   margin-top: 15px;
+  padding: 15px;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  -ms-transform: translateX(-50%) translateY(-50%);
+  -webkit-transform: translate(-50%,-50%);
+  transform: translate(-50%,-50%);
+}
+.wrapForm h1{
+       font-weight: bold;
+     font-size: 70px;
+     margin-bottom: 20px;
+}
+.wrapForm input[type=text]{
+  width: 400px;
+  padding: 6px 5px;
+  margin: 20px auto;
+  background: #cfcfcf;
+  font-size: 15px;
+  text-align: center;
+}
+
+#section2{
+  margin-top: 130px;
+}
+.card-img-top{
+  border: 5px black solid;
+  margin: auto;
+  max-height: 250px;
+  width: auto;
+
+}
+.card-title{
+  text-align: center;
+  margin: 20px auto;
+}
+.card{
+  border: none;
+}
+.btnClear {
+    background: none;
+    border: none
+}
+
+.btnClear:focus {
+    outline: none;
+}
+
+.testStart{
+  text-align: start ;
+  font-weight: normal ;
+  color:#6001ff;
+  
+
+}
+.lineheight h5 {
+  margin: 20px auto;
+}

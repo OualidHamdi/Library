@@ -1,7 +1,7 @@
 <?php
  include('function/db.php');
 
-    $query = "SELECT * FROM Books";
+    $query = "SELECT * FROM Books ORDER BY ID DESC";
     $query_run = mysqli_query($connection,$query);
     
   ?>
@@ -46,10 +46,12 @@
 
                     <table id="table">
                         <tr class="trBg">
-                            <th>Title</th>
+                            <th width="300px">Title</th>
                             <th>Author</th>
-                            <th>image</th>
-                            <th>published at</th>
+                            <th>Image</th>
+                            <th>Published at</th>
+                            <th>Prix</th>
+                            <th>Quantité</th>
                             <th>action</th>
                         </tr>
                         <?php

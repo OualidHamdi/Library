@@ -49,7 +49,14 @@
                   <span class="custom-file-control"></span>
                 </label>
               </div> 
-
+              <div class="form-group">
+                <label class="text-inverse" for="Author">Prix</label>
+                <input type="text" class="form-control" id="Prix" name="Prix" placeholder="Prix" required>
+              </div>
+              <div class="form-group">
+                <label class="text-inverse" for="Author">Quantité au stock</label>
+                <input type="text" class="form-control" id="Quantite" name="Quantite" placeholder="Quantité au stock" required>
+              </div>
                <div class="form-group">
                 <label class="text-inverse" for="Publishedat">Published at</label>
                 <input type="date" class="form-control" name="publishedat" id="Publishedat" placeholder="Published at" required>
