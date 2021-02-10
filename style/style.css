@@ -268,11 +268,13 @@ button.btnStyle{
 
 .testStart{
   text-align: start ;
-  font-weight: normal ;
+  font-weight: bold ;
   color:#6001ff;
-  
-
 }
+
 .lineheight h5 {
   margin: 20px auto;
+}
+.form-control{
+  background: #e7e7e7;
 }

@@ -14,7 +14,9 @@
     </style>
 </head>
 <body>
-    <?php include('header.php') ?>
+    <?php include('header.php');
+     require('function/function.php');
+      ?>
     <div class="colorBg"></div>
     <div class="bg ">
   <section id="funnnels">
@@ -26,7 +28,7 @@
             <h1>READ<br> MORE<br> BOOKS</h1>
             <form action="oneBook.php" method="POST">
               <input type="text" name="book" placeholder="FIND YOUR BOOK HERE"><br>
-            <input type="submit" class="bntStyle" style="padding: 7px 23px;" name="shearch" value="shearch">
+            <input type="submit" class="bntStyle" style="padding: 7px 23px;" name="shearch" value="SEARSH">
             </form>
           </div>
         <div class="clearfix"></div>

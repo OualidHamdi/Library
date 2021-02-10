@@ -1,0 +1,7 @@
+you must add your email and password in:
+C:\xampp\htdocs\library\phpmailer\index.php 
+line : 
+25   :  $mail->Username   = 'your email'; 
+26   :  $mail->Password   = 'your password';   
+32   :  $mail->addAddress('your email', 'name'); 
+
