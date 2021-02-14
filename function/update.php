@@ -15,7 +15,7 @@ $publishedat = $_POST['publishedat'];
 
 if($title=="" || $auteur=="" || $publishedat==""||  $prix=="" || $quantite==""  ){
 $_SESSION['status'] = "Pardon!! Veuillez remplire tous les champs!";
-header ('location: ../books.php');
+header ('location: ../Admin/books.php');
 return;
 }
 
@@ -39,11 +39,11 @@ return;
         move_uploaded_file($_FILES["upd_img"]["tmp_name"], "../upload/".$_FILES["upd_img"]["name"]);
 
         $_SESSION['success'] = "Votre modification a été bien effectuée";
-        header('Location: ../books.php');
+        header('Location: ../Admin/books.php');
     }else
     {
         $_SESSION['status']= "Votre modification n'as pas été effectuée";
-        header('Location: ../books.php');
+        header('Location: ../Admin/books.php');
     }
 }
 ?>

@@ -8,11 +8,11 @@ include('db.php');
 		if($query_run)
 		{
 			$_SESSION['success'] =  "Suppression avec success";
-			header('Location: ../books.php');
+			header('Location: ../Admin/books.php');
 		}else
 		{
 			$_SESSION['status']= "La suppression n'a pas été effectuée";
-			header('Location: ../books.php');
+			header('Location: ../Admin/books.php');
 		}
 	
 

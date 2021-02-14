@@ -1,5 +1,9 @@
 <?php
- include('function/db.php');
+ include('../function/db.php');
+
+   if(!isset($_SESSION['first_name'])&& !isset($_SESSION['last_name'])){
+     header ('Location: ../home.php');
+ }
 
     $query = "SELECT * FROM Books ORDER BY ID DESC";
     $query_run = mysqli_query($connection,$query);
@@ -11,8 +15,8 @@
     <head>
         <meta charset="UTF-8">
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
-          <?php include('function/boostrap.php') ?>
-    <link rel="stylesheet" href="style/style.css">
+          <?php include('../function/boostrap.php') ?>
+    <link rel="stylesheet" href="../style/style.css">
 
         <title>LIBRARY</title>
         <style>
@@ -26,8 +30,8 @@
 
     <body>
         <?php
-        include('header.php');
-      include('function/function.php');
+              include('header.php') ;
+               include('../function/function.php');
      ?> 
         <!--books table-->
        
@@ -55,13 +59,13 @@
                             <th>action</th>
                         </tr>
                         <?php
-          include('function/read.php');
+          include('../function/read.php');
           ?>
                     </table>
                 </div>
                 <!--books table end-->
       </div>
- <?php include('footer.php') ?>
+ <?php include('../footer.php') ?>
   </div>
     </body>
 

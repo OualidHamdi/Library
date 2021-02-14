@@ -278,3 +278,16 @@ button.btnStyle{
 .form-control{
   background: #e7e7e7;
 }
+
+ .has-error label,
+        .has-error input,
+        .has-error textarea {
+            color: red;
+            border-color: red;
+        }
+
+        .list-unstyled li {
+            font-size: 13px;
+            padding: 4px 0 0;
+            color: red;
+        }

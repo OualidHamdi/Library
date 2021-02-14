@@ -14,7 +14,10 @@
     </style>
 </head>
 <body>
-    <?php include('header.php');
+
+    <?php 
+    include('function/db.php');
+    include('header.php');
      require('function/function.php');
       ?>
     <div class="colorBg"></div>
@@ -51,12 +54,7 @@
 <div class="card-deck">
 
     <?php 
-       include('function/db.php');
-        function clean($string) {
-   $string = str_replace(' ', '-', $string); 
-
-   return preg_replace('/[^A-Za-z0-9\-]/', '', $string);
-}
+       
 
     $query = "SELECT * FROM Books ORDER BY ID DESC LIMIT 3 ";
     $query_run = mysqli_query($connection,$query);
@@ -65,10 +63,10 @@
       {
         while($row = mysqli_fetch_assoc($query_run))
         {
-          $link = clean($row['title']);
+    
           ?>
           <div class="col-sm-4">
-            <form action="oneBook.php/<?php echo $link; ?>" method="POST">
+            <form action="oneBook.php" method="POST">
              
   <div class="card">
      <button type="submit" class="btnClear" name="shearch">

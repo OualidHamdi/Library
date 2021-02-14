@@ -13,7 +13,7 @@ $image = addslashes($_FILES["upd_img"]['name']);
 
 if($title=="" || $auteur=="" || $publishedat=="" || $image=="" ||  $prix=="" || $quantite=="" ){
 $_SESSION['status'] = "Pardon!! Veuillez remplire tous les champs!";
-header ('location: ../addbook.php');
+header ('location: ../Admin/addbook.php');
 return;
 }
 
@@ -26,10 +26,10 @@ move_uploaded_file($_FILES["upd_img"]["tmp_name"], "../upload/".$_FILES["upd_img
 
 $_SESSION['success'] = "Votre insertion a bien été effectuée";
 
-header ('location: ../books.php');
+header ('location: ../Admin/books.php');
 }else{
 $_SESSION['status'] = "Pardon!! Veuillez réessayer plus tard!";
-header ('location: ../addbook.php');
+header ('location: ../Admin/addbook.php');
 
 }
 	

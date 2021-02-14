@@ -5,3 +5,9 @@ line :
 26   :  $mail->Password   = 'your password';   
 32   :  $mail->addAddress('your email', 'name'); 
 
+
+---------------------------------------------------
+Admin | Login 
+
+email : oualidhamdi12@gmail.com
+password : watachiwa

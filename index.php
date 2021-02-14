@@ -9,7 +9,9 @@
     <title>Library</title>
 </head>
 <body>
-    <?php include('header.php') ?>
+    <?php 
+    include('function/db.php');
+    include('header.php') ?>
     
 <div class=" main-container">
     <section id="funnnels">
