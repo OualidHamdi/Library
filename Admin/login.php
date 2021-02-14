@@ -21,7 +21,7 @@
 
       <?php
 
-              include('../header.php') ;
+              include('header.php') ;
       include('../function/function.php');
      ?>
      <div class=" main-container">
