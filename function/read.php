@@ -4,14 +4,15 @@
         while($row = mysqli_fetch_assoc($query_run))
         {
           ?>
-          <tr class="trLine">
-            <td><?php echo $row['title']; ?></td>
-            <td><?php echo $row['auteur']; ?></td>
-            <td><?php echo '<img src="../upload/'.$row['image'].'" width="100">'?></td>
-            <td><?php echo $row['publishedat']; ?></td>
-            <td><?php echo $row['Prix']; ?></td>
-            <td><?php echo $row['QStock']; ?></td>
-            <td>
+           <tbody role="rowgroup">
+          <tr class="trLine" role="row">
+            <td  role="cell"><?php echo $row['title']; ?></td>
+            <td  role="cell"><?php echo $row['auteur']; ?></td>
+            <td  role="cell"><?php echo '<img src="../upload/'.$row['image'].'" width="100">'?></td>
+            <td  role="cell"><?php echo $row['publishedat']; ?></td>
+            <td  role="cell"><?php echo $row['Prix']; ?></td>
+            <td  role="cell"><?php echo $row['QStock']; ?></td>
+            <td  role="cell">
               <form action="../Admin/updateBook.php" method="post" >
                 <input type="hidden" name="edit_id" value="<?php echo $row['ID']; ?>">
                 <?php if(($_SESSION['language'])=="EN"):?>
@@ -35,6 +36,10 @@
                 
             </td>
           </tr>
+
+
+
+  </tbody>
           <?php
         }
       }else {
