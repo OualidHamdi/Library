@@ -14,13 +14,23 @@
             <td>
               <form action="../Admin/updateBook.php" method="post" >
                 <input type="hidden" name="edit_id" value="<?php echo $row['ID']; ?>">
-               <button  type="submit"  name="edit_Book" class="btn btn-warning edit_Book"  > Update</button>
+                <?php if(($_SESSION['language'])=="EN"):?>
+           <button  type="submit"  name="edit_Book" class="btn btn-warning edit_Book"  > Update</button>
+            <?php else : ?>
+            <button  type="submit"  name="edit_Book" class="btn btn-warning edit_Book"  > Modifier</button>
+             <?php endif ?>
+               
               </form>
       
               
                    <form action="../Admin/deleteBook.php" method="post"  >
                      <input type="hidden" name="delete_id" value="<?php echo $row['ID']; ?>">
-                      <button type="submit" name="delete_btn" class="btn btn-danger delete_btn"  > Delete</button>
+                     <?php if(($_SESSION['language'])=="EN"):?>
+            <button type="submit" name="delete_btn" class="btn btn-danger delete_btn"  > Delete</button>
+            <?php else : ?>
+                <button type="submit" name="delete_btn" style="padding: 8px 5px;" class="btn btn-danger delete_btn"  > Supprimer</button>
+             <?php endif ?>
+                     
                    </form>
                 
             </td>

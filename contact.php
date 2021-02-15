@@ -18,9 +18,16 @@
         <!--start of form to add books-->
        <div class=" main-container"> 
       <div class="container">
+
+
            <form class="form-inline mb-3">
                     <div class="ilinetext">
-                    <h5 class="title">CONTACT US :</h5>
+                       <?php if(($_SESSION['language'])=="EN"):?>
+              <h5 class="title">CONTACT US :</h5>
+            <?php else : ?>
+                 <h5 class="title">NOUS CONTACTER :</h5>
+             <?php endif ?>
+                    
                     </div>
               </form>
           
@@ -30,8 +37,14 @@
    <form action="phpmailer/index.php" method="POST">
   <div class="form-row">
     <div class="form-group col-md-6">
-      <label for="inputEmail4" class="testStart">NAME</label>
+      <?php if(($_SESSION['language'])=="EN"):?>
+            <label for="inputEmail4" class="testStart">NAME</label>
       <input type="text" class="form-control" id="NameContact" name="name" placeholder="Name" required>
+            <?php else : ?>
+                 <label for="inputEmail4" class="testStart">Nom</label>
+      <input type="text" class="form-control" id="NameContact" name="name" placeholder="Nom" required>
+             <?php endif ?>
+      
     </div>
   </div>
   <div class="form-row">
@@ -47,8 +60,12 @@
     </div>
   </div>
 
-
-  <button type="submit" name="send" class="bntStyle" style="padding: 7px 23px;">SEND</button>
+  <?php if(($_SESSION['language'])=="EN"):?>
+              <button type="submit" name="send" class="bntStyle" style="padding: 7px 23px;">SEND</button>
+            <?php else : ?>
+                <button type="submit" name="send" class="bntStyle" style="padding: 7px 23px;">ENVOYER</button>
+             <?php endif ?>
+  
 </form>
 
 

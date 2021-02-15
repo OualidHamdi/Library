@@ -21,7 +21,12 @@
       <div class="container">
            <form class="form-inline mb-3">
                     <div class="ilinetext">
-                    <h5 class="title">OUR BOOKS :</h5>
+                  
+                    <?php if(($_SESSION['language'])=="EN"):?>
+              <h5 class="title">OUR BOOKS :</h5>
+            <?php else : ?>
+                 <h5 class="title">NOS LIVRES :</h5>
+             <?php endif ?>
                     </div>
               </form>
           

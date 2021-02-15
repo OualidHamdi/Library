@@ -1,7 +1,14 @@
 
 <?php
 
-session_start();
+
+	if($_SESSION['language']=="EN"){
+		$var = "EN";
+	}else{
+		$var = "FR";
+	}
+	
+	session_start();
 
 	unset($_COOKIE['ID']);
 	unset($_COOKIE['email']);
@@ -13,12 +20,13 @@ session_start();
 	setcookie('first', null, -1, '/');
 	setcookie('last_name', null, -1, '/');
 
-	
-	
+		
+		
 	session_unset();
 	session_destroy();
-
 	
+	session_start();
+	$_SESSION['language']= $var;
 
 	header("Location: ../home.php");
 	exit();

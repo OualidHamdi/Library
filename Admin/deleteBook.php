@@ -30,18 +30,23 @@
           <div class="container">
            <form class="form-inline mb-3">
                     <div class="ilinetext">
-                    <h5 class="title">DELETE « <?php echo $title ?> » :</h5>
+                      <?php if(($_SESSION['language'])=="EN"):?>
+             <h5 class="title">DELETE « <?php echo $title ?> » :</h5>
+            <?php else : ?>
+                <h5 class="title">SUPPRIMER « <?php echo $title ?> » :</h5>
+             <?php endif ?>
+                   
                     </div>
               </form>
           
      
                        <!-- Modal -->
-
-    <div class="modal-content">
+<?php if(($_SESSION['language'])=="EN"):?>
+               <div class="modal-content">
           <div class="head">?</div>
    
       <div class="modal-body body">
-        Etes-vous sûr de vouloir supprimer ce livre?
+        Are you sure you want to delete this book?
       </div>
       <div class="modal-footer" style="margin:auto;border:none;">
         
@@ -57,6 +62,29 @@
       </div>
     
         </div>
+            <?php else : ?>
+                  <div class="modal-content">
+          <div class="head">?</div>
+   
+      <div class="modal-body body">
+        Etes-vous sûr de vouloir supprimer ce livre?
+      </div>
+      <div class="modal-footer" style="margin:auto;border:none;">
+        
+       <form action="../function/delete.php" method="post">
+        <input type="hidden" name="delete_id" value="<?php echo $ID; ?>">
+        <button type="submit" class="btnStyle"  name="delete">OUI</button>
+       </form>
+       
+       <form action="books.php" method="post">
+        <button type="submit" class="btnStyle" style="background:#683bd4;"data-dismiss="modal">NON</button>
+       
+       </form>
+      </div>
+    
+        </div>
+             <?php endif ?>
+
          </div> 
           <?php include('../footer.php') ?>
         </div>

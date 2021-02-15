@@ -6,15 +6,20 @@ if(isset($_POST['Update']))
 {
     
 $id = $_POST['edit_id'];
-$title = $_POST['title'];
-$auteur = $_POST['auteur'];
+$title = addslashes($_POST['title']);
+$auteur = addslashes($_POST['auteur']);
 $prix = $_POST['Prix'];
 $quantite = $_POST['Quantite'];
 $image = addslashes($_FILES["upd_img"]['name']);
 $publishedat = $_POST['publishedat'];
 
 if($title=="" || $auteur=="" || $publishedat==""||  $prix=="" || $quantite==""  ){
-$_SESSION['status'] = "Pardon!! Veuillez remplire tous les champs!";
+     if($_SESSION['language']=="EN"){
+             $_SESSION['status']= "Sorry!! Please complete all fields!";
+            }else{
+                $_SESSION['status'] = "Pardon!! Veuillez remplire tous les champs!";
+            }
+
 header ('location: ../Admin/books.php');
 return;
 }
@@ -38,11 +43,21 @@ return;
     {
         move_uploaded_file($_FILES["upd_img"]["tmp_name"], "../upload/".$_FILES["upd_img"]["name"]);
 
-        $_SESSION['success'] = "Votre modification a été bien effectuée";
+      
+         if($_SESSION['language']=="EN"){
+               $_SESSION['success'] = "Your modification was successful";
+            }else{
+                   $_SESSION['success'] = "Votre modification a été bien effectuée";
+            }
         header('Location: ../Admin/books.php');
     }else
     {
-        $_SESSION['status']= "Votre modification n'as pas été effectuée";
+         if($_SESSION['language']=="EN"){
+             $_SESSION['status']= "Your modification has not been made";
+            }else{
+                  $_SESSION['status']= "Votre modification n'as pas été effectuée";
+            }
+      
         header('Location: ../Admin/books.php');
     }
 }

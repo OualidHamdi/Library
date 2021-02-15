@@ -7,11 +7,20 @@ include('db.php');
 
 		if($query_run)
 		{
-			$_SESSION['success'] =  "Suppression avec success";
+			 if($_SESSION['language']=="EN"){
+      		$_SESSION['success'] =  "Deletion successfully";
+      		}else{
+      			$_SESSION['success'] =  "Suppression avec succès";
+      		}
+			
 			header('Location: ../Admin/books.php');
 		}else
-		{
-			$_SESSION['status']= "La suppression n'a pas été effectuée";
+		{ if($_SESSION['language']=="EN"){
+      		 $_SESSION['status']= "The deletion was not performed";
+      		}else{
+      			 $_SESSION['status']= "La suppression n'a pas été effectuée";
+      		}
+			
 			header('Location: ../Admin/books.php');
 		}
 	

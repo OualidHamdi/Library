@@ -7,10 +7,20 @@ if(isset($_POST['login_btn']))
 		$password_login = addslashes(trim($_POST['password']));
 		
 	if(empty($email_login) || empty($password_login)){
-		$_SESSION['status'] = "veuillez remplir tous les champs";
+		 if($_SESSION['language']=="EN"){
+      		 $_SESSION['status']= "please complete all fields";
+      		}else{
+      					$_SESSION['status'] = "veuillez remplir tous les champs";
+      		}
+
 		header ('Location: ../Admin/login.php');
 	}elseif(!filter_var($email_login,FILTER_VALIDATE_EMAIL)){
-		$_SESSION['status'] = "Veuillez inclure '@' dans votre e-mail, Il manque un symbole '@' dans '$email_login' .";
+		if($_SESSION['language']=="EN"){
+      		 $_SESSION['status']= "Please include '@' in your email, An '@' symbol is missing in '$ email_login'.";
+      		}else{
+      		$_SESSION['status'] = "Veuillez inclure '@' dans votre e-mail, Il manque un symbole '@' dans '$email_login' .";
+      		}
+		
 		header ('Location: Location: ../Admin/login.php');
 	}
 	
@@ -33,7 +43,12 @@ if(isset($_POST['login_btn']))
 		}
 	
 		else{
-			$_SESSION['status'] = "L'adresse e-mail ou le mot de passe est incorrect";
+			 if($_SESSION['language']=="EN"){
+      		 $_SESSION['status']= "The email address or password is incorrect";
+      		}else{
+      			$_SESSION['status'] = "L'adresse e-mail ou le mot de passe est incorrect";
+      		}
+			
 			header ('Location: ../Admin/login.php');
 
 		}

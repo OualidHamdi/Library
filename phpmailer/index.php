@@ -44,11 +44,11 @@ try {
     $mail->AltBody = $message;
 
     $mail->send();
-    $_SESSION['success'] = "Merci, votre message a bien été envoyé !";
+    $_SESSION['success'] = "Thank you, your message has been sent !";
     header ('location: ../contact.php');
 
 } catch (Exception $e) {
 
-$_SESSION['status'] = "votre message n'a pas été envoyé. Mailer Error: {$mail->ErrorInfo} ";
+$_SESSION['status'] = "Your message has not been sent. Mailer Error: {$mail->ErrorInfo} ";
 header ('location: ../contact.php');
 }

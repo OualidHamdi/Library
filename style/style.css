@@ -99,7 +99,7 @@ a:hover{
 .ilinetext {
   display: flex;
   justify-content: space-between;
-  width: 95%;
+  width: 100%;
 }
 .title{
      font-weight: bold;

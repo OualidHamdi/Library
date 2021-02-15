@@ -20,7 +20,12 @@
        <div class="container">
            <form class="form-inline mb-3">
                     <div class="ilinetext">
-                    <h5 class="title">UPDATE BOOK :</h5>
+                      <?php if(($_SESSION['language'])=="EN"):?>
+                  <h5 class="title">UPDATE BOOK :</h5>
+            <?php else : ?>
+             <h5 class="title">Modifier le livre :</h5>
+             <?php endif ?>
+
                     </div>
               </form>
 
@@ -38,8 +43,8 @@
 
   <div class="row">
       <div class="offset-lg-2 col-lg-8 col-sm-12 col-12 border rounded main-section">
-       
-        <form action="../function/update.php" method="post" enctype="multipart/form-data" class="container" id="needs-validation" novalidate>
+       <?php if(($_SESSION['language'])=="EN"):?>
+              <form action="../function/update.php" method="post" enctype="multipart/form-data" class="container" id="needs-validation" novalidate>
           
                <div class="form-group">
                 <label class="text-inverse" for="Title">Title</label>
@@ -59,12 +64,12 @@
                 </label>
               </div> 
                     <div class="form-group">
-                <label class="text-inverse" for="Author">Prix</label>
-                <input type="text" class="form-control" id="Prix" name="Prix" placeholder="Prix"  value="<?php echo $row['Prix']; ?>"required>
+                <label class="text-inverse" for="Author">Price</label>
+                <input type="text" class="form-control" id="Prix" name="Prix" placeholder="Price"  value="<?php echo $row['Prix']; ?>"required>
               </div>
               <div class="form-group">
-                <label class="text-inverse" for="Author">Quantité au stock</label>
-                <input type="text" class="form-control"  id="Quantite" name="Quantite" placeholder="Quantité au stock" value="<?php echo $row['QStock']; ?>" required>
+                <label class="text-inverse" for="Author">Quantity in stock</label>
+                <input type="text" class="form-control"  id="Quantite" name="Quantite" placeholder="Quantity in stock" value="<?php echo $row['QStock']; ?>" required>
               </div>
                <div class="form-group">
                 <label class="text-inverse" for="Publishedat">Published at</label>
@@ -79,6 +84,49 @@
        
      
  </form>
+            <?php else : ?>
+                <form action="../function/update.php" method="post" enctype="multipart/form-data" class="container" id="needs-validation" novalidate>
+          
+               <div class="form-group">
+                <label class="text-inverse" for="Title">Titre</label>
+                <input type="text" class="form-control" id="Title" name="title" placeholder="Titre"  value="<?php echo $row['title']; ?>"  required>
+              </div>
+               <div class="form-group">
+                <label class="text-inverse" for="Author">Auteure</label>
+                <input type="text" class="form-control" id="Author" name="auteur" placeholder="Auteure"  value="<?php echo $row['auteur']; ?>" required>
+              </div>
+
+                 <div class="form-group">
+                    <label class="text-inverse" for="image">Image</label><br>
+                <label class="custom-file">
+
+                  <input type="file" id="image" name="upd_img" class="form-control custom-file-input" style="padding: 0 300px;" required>
+                  <span class="custom-file-control"></span>
+                </label>
+              </div> 
+                    <div class="form-group">
+                <label class="text-inverse" for="Author">Prix</label>
+                <input type="text" class="form-control" id="Prix" name="Prix" placeholder="Prix"  value="<?php echo $row['Prix']; ?>"required>
+              </div>
+              <div class="form-group">
+                <label class="text-inverse" for="Author">Quantité au stock</label>
+                <input type="text" class="form-control"  id="Quantite" name="Quantite" placeholder="Quantité au stock" value="<?php echo $row['QStock']; ?>" required>
+              </div>
+               <div class="form-group">
+                <label class="text-inverse" for="Publishedat">Publié àt</label>
+                <input type="date" class="form-control" name="publishedat" id="Publishedat" placeholder="Publié à" value="<?php echo $row['publishedat']; ?>" required>
+              </div>
+<div class="row">
+            <div class="col-lg-12 col-sm-12 col-12 text-center">
+                <input type="hidden" name="edit_id" value="<?php echo $row['ID']; ?>">
+                <button class="bntStyle"  name="Update" type="submit">Modifer</button>
+            </div>
+          </div>
+       
+     
+ </form>
+             <?php endif ?>
+      
 
     </div>  
  </div>

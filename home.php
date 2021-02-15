@@ -27,13 +27,25 @@
     <div class="row padd">
 
       <div class="col-sm-15 text-center" style="height: 25em;">
+        <?php if(($_SESSION['language'])=="EN"):?>
           <div class="wrapForm">
             <h1>READ<br> MORE<br> BOOKS</h1>
             <form action="oneBook.php" method="POST">
               <input type="text" name="book" placeholder="FIND YOUR BOOK HERE"><br>
-            <input type="submit" class="bntStyle" style="padding: 7px 23px;" name="shearch" value="SEARSH">
+            <input type="submit" class="bntStyle" style="padding: 7px 23px;" name="shearch" value="SEARCH">
+            </form>
+          </div> 
+          <?php else : ?>
+          <div class="wrapForm">
+               <h1>LIRE <br> PLUS<br> DE LIVRES</h1>       
+            <form action="oneBook.php" method="POST">
+              <input type="text" name="book" placeholder="TROUVEZ VOTRE LIVRE ICI"><br>
+            <input type="submit" class="bntStyle" style="padding: 7px 23px;" name="shearch" value="CHERCHER">
             </form>
           </div>
+
+           <?php endif ?>
+
         <div class="clearfix"></div>
       </div>
 
@@ -44,10 +56,11 @@
      <div class=" main-container"> 
       <div class="container">
           
-                   
+                    <?php if(($_SESSION['language'])=="EN"):?>
       <h3 class="title" style="margin-bottom: 70px;text-align: center;">Our recent books :</h3>
-          
-          
+      <?php else : ?>
+          <h3 class="title" style="margin-bottom: 70px;text-align: center;">Nos livres récents :</h3>
+            <?php endif ?>
      
        
 

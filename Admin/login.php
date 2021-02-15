@@ -27,72 +27,58 @@
      <div class=" main-container">
     <div class="container mt-5">
         <div class="card">
-            <h5 class="card-header title text-center">Login Panel Admin</h5><br>
+          <?php if(($_SESSION['language'])=="EN"):?>
+            <h5 class="card-header title text-center">Login  | Panel Admin</h5>
+            <?php else : ?>
+               <h5 class="card-header title text-center">Connexion | Administrateur du panneau</h5>
+             <?php endif ?>
+            <br>
             <div class="card-body">
                 <form  action="../function/login.php" role="form" data-toggle="validator" method="POST" >
 
 
-<!--                     <div class="form-group">
-                        <label>Name</label>
-                        <input class="form-control" data-error="You must have a name." id="inputName" placeholder="Name"
-type="text" required />
-
-                       
-                        <div class="help-block with-errors"></div>
-                    </div>
- -->
-<!--                     <div class="form-group">
-                        <label>Username</label>
-                        <input class="form-control item" type="text" name="username" maxlength="10" minlength="3"
-pattern="^[a-zA-Z0-9_.-]*$" id="inputUsername" placeholder="Username" required>
-                        <div class="help-block with-errors"></div>
-                    </div> -->
-
                     <div class="form-group">
                         <label>Email</label>
-                        <input type="email" name="email" class="form-control" id="inputEmail" placeholder="Email" required>
+                        <?php if(($_SESSION['language'])=="EN"):?>
+                 <input type="email" name="email" class="form-control" id="inputEmail" placeholder="Email" data-error="Please complete this field."  required>
+            <?php else : ?>
+                    <input type="email" name="email" class="form-control" id="inputEmail" placeholder="Email" data-error="Veuillez renseigner ce champ."  required>
+             <?php endif ?>
+                 
 
                         <!-- Error -->
                         <div class="help-block with-errors"></div>
                     </div>
-
-
-                    <div class="form-group">
+<?php if(($_SESSION['language'])=="EN"):?>
+     <div class="form-group">
                         <label>Password</label>
                         <div class="form-group">
                             <input type="password" name="password" class="form-control" id="inputPassword"
-data-error="Veuillez renseigner ce champ." placeholder="Password" required />
+data-error="Please complete this field." placeholder="Password" required />
 
                             <!-- Error -->
                             <div class="help-block with-errors"></div>
                         </div>
                     </div>
-
-       <!--              <div class="form-group">
-                        <label>Confirm Password</label>
+            <?php else : ?>
+     <div class="form-group">
+                        <label>Mot de passe</label>
                         <div class="form-group">
-                            <input type="password" class="form-control" id="inputConfirmPassword"
-data-match="#inputPassword" data-match-error="Password don't match"
-placeholder="Confirm" required />
+                            <input type="password" name="password" class="form-control" id="inputPassword"
+data-error="Veuillez renseigner ce champ." placeholder="Mot de passe" required />
 
-                         
+                            <!-- Error -->
                             <div class="help-block with-errors"></div>
                         </div>
-                    </div> -->
-
-
-<!--                     <div class="form-group">
-                        <label>Message</label>
-                        <textarea class="form-control" data-error="Please enter message." id="inputMessage"
-placeholder="Message" required=""></textarea>
-
-         
-                        <div class="help-block with-errors"></div>
-                    </div> -->
-
-
-                    <div class="form-group">
-                        <button class="bntStyle" name="login_btn" type="submit">Login</button>
+                    </div>
+             <?php endif ?>
+                
+                    <div class="form-group"><?php if(($_SESSION['language'])=="EN"):?>
+            <button class="bntStyle" name="login_btn" type="submit">Login</button>
+            <?php else : ?>
+             <button class="bntStyle" name="login_btn" type="submit">Connexion</button>
+             <?php endif ?>
+                        
                     </div>
                 </form>
             </div>

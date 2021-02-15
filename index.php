@@ -20,7 +20,11 @@
 
       <div class="col-sm-15 text-center">
           <div class="wrap">
+             <?php if(($_SESSION['language'])=="EN"):?>
             <h3>WELCOME TO LIBRARY</h3>
+            <?php else : ?>
+               <h3>BIENVENUE À LA BIBLIOTHÈQUE</h3>
+             <?php endif ?>
           </div>
         <div class="clearfix"></div>
       </div>
