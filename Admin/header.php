@@ -30,7 +30,7 @@
                <b> <a class="nav-link" href="books.php">EDIT</a></b>
             </li>
             <li class="nav-item">
-               <b> <a class="nav-link" href="../function/logout.php">LOGOUT</a></b>
+               <b> <a class="nav-link" href="../function/logout.php" title="LOGOUT"><img src="img/logout.png"></a></b>
             </li>
                        <?php endif ?>
                        <li class="nav-item dropdown">
