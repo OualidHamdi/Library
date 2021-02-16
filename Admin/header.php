@@ -47,7 +47,7 @@
      <?php else : ?>
 
       <div class="dual-collapse1">
-       <b> <a class="navbar-brand mx-auto" href="index.php" style=" margin-right: 10px !important;">BIBLIOTHÈQUE </a></b>
+       <b> <a class="navbar-brand mx-auto" href="../index.php" style=" margin-right: 10px !important;">BIBLIOTHÈQUE </a></b>
         <button class="navbar-toggler" type="button" data-toggle="collapse" data-target=".dual-collapse2">
             <span class="navbar-toggler-icon "></span>
         </button>

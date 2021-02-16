@@ -71,6 +71,7 @@
       width: 45%;
       padding-right: 10px;
       white-space: nowrap;
+      font-weight: bold;
     }
 
     /*
@@ -79,7 +80,7 @@
     */
 
     <?php if(($_SESSION['language'])=="EN"):?>
-            td:nth-of-type(1):before { content: "Title"; }
+    td:nth-of-type(1):before { content: "Title"; }
     td:nth-of-type(2):before { content: "Author"; }
     td:nth-of-type(3):before { content: "Image"; }
     td:nth-of-type(4):before { content: "Published at"; }
@@ -87,7 +88,7 @@
     td:nth-of-type(6):before { content: "Quantity"; }
     td:nth-of-type(7):before { content: "action"; }
             <?php else : ?>
-               td:nth-of-type(1):before { content: "Title"; }
+    td:nth-of-type(1):before { content: "Title"; }
     td:nth-of-type(2):before { content: "Author"; }
     td:nth-of-type(3):before { content: "Image"; }
     td:nth-of-type(4):before { content: "Published at"; }
