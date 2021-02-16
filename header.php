@@ -29,7 +29,7 @@
                <b> <a class="nav-link" href="Admin/books.php">EDIT</a></b>
             </li>
             <li class="nav-item">
-               <b> <a class="nav-link" href="function/logout.php">LOGOUT</a></b>
+               <b> <a class="nav-link" href="function/logout.php" title="LOGOUT"><img src="img/logout.png"></a></b>
             </li>
                        <?php endif ?>
                        <li class="nav-item dropdown">
@@ -72,7 +72,7 @@
                <b> <a class="nav-link" href="Admin/books.php">ÉDITER</a></b>
             </li>
             <li class="nav-item">
-               <b> <a class="nav-link" href="function/logout.php">DÉCONNECTER</a></b>
+               <b> <a class="nav-link" href="function/logout.php"title="DÉCONNECTER"><img src="img/logout.png"></a></b>
             </li>
                        <?php endif ?>
                        <li class="nav-item dropdown">
